@@ -4,7 +4,7 @@ license = "GPL-3.0"
 
 [[mods]]
 modId = "dragon_wings_rebuild"
-version = "1.0.0"
+version = "0.1.0"
 displayName = "Dragon Wings: Rebuild"
 authors = "Xiaoyu_2009 (original), Andows96 (26.3 port)"
 description = '''Renders dragon wings on the player's back. Client-side only.'''
