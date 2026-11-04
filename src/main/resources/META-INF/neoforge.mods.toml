@@ -1,0 +1,24 @@
+modLoader = "javafml"
+loaderVersion = "[12,)"
+license = "GPL-3.0"
+
+[[mods]]
+modId = "dragon_wings_rebuild"
+version = "1.0.0"
+displayName = "Dragon Wings: Rebuild"
+authors = "Xiaoyu_2009 (original), Andows96 (26.3 port)"
+description = '''Renders dragon wings on the player's back. Client-side only.'''
+
+[[dependencies.dragon_wings_rebuild]]
+modId = "neoforge"
+type = "required"
+versionRange = "[26.3.0,)"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.dragon_wings_rebuild]]
+modId = "minecraft"
+type = "required"
+versionRange = "[26.3,26.4)"
+ordering = "NONE"
+side = "CLIENT"

@@ -1,5 +1,9 @@
-package net.xiaoyu.dragon_wings;
+package dev.andows96.dragonwings;
 
+/**
+ * Kept byte-for-byte compatible with the 1.21.1 original: same texture paths (relative to
+ * {@code assets/<mod id>/}) and the same config key prefixes.
+ */
 public enum WingType {
     // 末影龙翅膀
     ENDER_DRAGON("textures/entity/ender_dragon_wings.png", "ender_dragon_wings", "Ender Dragon Wings"),
@@ -9,17 +13,17 @@ public enum WingType {
     private final String texturePath;
     private final String configPrefix;
     private final String displayName;
-    
+
     WingType(String texturePath, String configPrefix, String displayName) {
         this.texturePath = texturePath;
         this.configPrefix = configPrefix;
         this.displayName = displayName;
     }
-    
+
     public String getTexturePath() {
         return texturePath;
     }
-    
+
     public String getDisplayName() {
         return displayName;
     }

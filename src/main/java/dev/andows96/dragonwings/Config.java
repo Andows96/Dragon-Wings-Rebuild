@@ -1,9 +1,13 @@
-package net.xiaoyu.dragon_wings;
+package dev.andows96.dragonwings;
 
-import net.neoforged.neoforge.common.ModConfigSpec;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.config.ModConfig;
+import net.neoforged.neoforge.common.ModConfigSpec;
 
+/**
+ * Unchanged from upstream apart from the package: same keys, same defaults, same ranges,
+ * so an existing {@code config/dragon_wings-client.toml} maps over key-for-key.
+ */
 public class Config {
     public static ModConfigSpec configSpec;
 
@@ -13,7 +17,7 @@ public class Config {
     public static ModConfigSpec.IntValue[] WINGS_SCALE;
     public static ModConfigSpec.BooleanValue[] WINGS_FLYING_EXPAND;
     public static ModConfigSpec.BooleanValue[] SHOW_OTHER_PLAYERS_WINGS;
-    
+
     static {
         ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
 
@@ -21,7 +25,7 @@ public class Config {
         WINGS_SCALE = new ModConfigSpec.IntValue[WING_TYPES.length];
         WINGS_FLYING_EXPAND = new ModConfigSpec.BooleanValue[WING_TYPES.length];
         SHOW_OTHER_PLAYERS_WINGS = new ModConfigSpec.BooleanValue[WING_TYPES.length];
-        
+
         for (int i = 0; i < WING_TYPES.length; i++) {
             WingType wingType = WING_TYPES[i];
             builder.push(wingType.getDisplayName() + " Settings");
@@ -41,13 +45,13 @@ public class Config {
             SHOW_OTHER_PLAYERS_WINGS[i] = builder
                 .comment("Whether to show " + wingType.getDisplayName().toLowerCase() + " on other players")
                 .define(wingType.getDisplayName().toLowerCase().replace(" ", "_") + "_show_other_players_wings", false);
-            
+
             builder.pop();
         }
-        
+
         configSpec = builder.build();
     }
-    
+
     public static void registerConfig(ModContainer modContainer) {
         modContainer.registerConfig(ModConfig.Type.CLIENT, configSpec);
     }
@@ -59,7 +63,7 @@ public class Config {
         }
         return true;
     }
-    
+
     public static int getWingsScale(WingType wingType) {
         int index = wingType.ordinal();
         if (index >= 0 && index < WINGS_SCALE.length) {
