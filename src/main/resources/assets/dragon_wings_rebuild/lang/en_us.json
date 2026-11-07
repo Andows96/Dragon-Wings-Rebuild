@@ -1,0 +1,9 @@
+{
+  "dragon_wings_rebuild.config.title": "Ender Dragon Wings",
+  "dragon_wings_rebuild.config.enabled": "Enabled",
+  "dragon_wings_rebuild.config.scale": "Scale: %s%%",
+  "dragon_wings_rebuild.config.flying_expand": "Expand while flying",
+  "dragon_wings_rebuild.config.show_others": "Show on other players",
+  "dragon_wings_rebuild.config.done": "Done",
+  "dragon_wings_rebuild.config.cancel": "Cancel"
+}

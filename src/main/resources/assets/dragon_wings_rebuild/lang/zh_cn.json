@@ -1,0 +1,9 @@
+{
+  "dragon_wings_rebuild.config.title": "末影龙翅膀",
+  "dragon_wings_rebuild.config.enabled": "启用",
+  "dragon_wings_rebuild.config.scale": "缩放：%s%%",
+  "dragon_wings_rebuild.config.flying_expand": "飞行时展开",
+  "dragon_wings_rebuild.config.show_others": "显示其他玩家",
+  "dragon_wings_rebuild.config.done": "完成",
+  "dragon_wings_rebuild.config.cancel": "取消"
+}
